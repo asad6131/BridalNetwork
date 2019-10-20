@@ -1,0 +1,39 @@
+export const GET_ERRORS = "GET_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const SET_CURRENT_USER = "SET_CURRENT_USER";
+export const GET_PROFILE = "GET_PROFILE";
+export const PROFILE_LOADING = "PROFILE_LOADING";
+export const PROFILE_NOT_FOUND = "PROFILE_NOT_FOUND";
+export const CLEAR_CURRENT_PROFILE = "CLEAR_CURRENT_PROFILE";
+export const GET_PROFILES = "GET_PROFILES";
+
+export const GET_FAV = "GET_FAV";
+export const GET_VIEWS = "GET_VIEWS";
+export const GET_VENDORS = "GET_VENDORS";
+export const GET_VENDOR = "GET_VENDOR";
+export const ADD_VENDORS = "ADD_VENDORS";
+export const UPDATE_VENDORS = "UPDATE_VENDORS";
+export const GET_SLIDERS = "GET_SLIDERS";
+
+export const GET_CATEGORIES = "GET_CATEGORIES";
+export const ADD_CATEGORIES = "ADD_CATEGORIES";
+export const UPDATE_CATEGORIES = "UPDATE_CATEGORIES";
+
+export const ADD_SURVEY = "ADD_SURVEY";
+
+export const GET_PLANS = "GET_PLANS";
+
+export const HANDLE_PROGRESS = "HANDLE_PROGRESS";
+export const UPLOADED_IMAGES_LINK = "UPLOADED_IMAGES_LINK";
+
+export const ADD_SOCKET = "ADD_SOCKET";
+export const ADD_USER = "ADD_USER";
+
+export const GET_MESSAGES = "GET_MESSAGES";
+export const GET_CHAT_NOTIFICATION = "GET_CHAT_NOTIFICATION";
+export const UPDATE_CHAT = "UPDATE_CHAT";
+export const UPDATE_USER = "UPDATE_USER";
+export const GET_USERS = "GET_USERS";
+
+export const IMAGE_LOADER = "IMAGE_LOADER";
+export const GET_CONTACTS = "GET_CONTACTS";

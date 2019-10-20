@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <remove name="Plesk. SEO-safe redirect for http://www.bridalnetwork.co" />
+                <remove name="startup-file" />
+                <rule name="ReverseProxyInboundRule1" stopProcessing="true">
+                    <match url="(.*)" />
+                    <action type="Rewrite" url="http://bridalnetwork.co:5000/{R:1}" />
+                </rule>
+                <rule name="startup-file" enabled="true">
+                    <match url="^$" />
+                    <conditions />
+                    <serverVariables />
+                    <action type="Rewrite" url="app.js" />
+                </rule>
+                <rule name="CanonicalHostNameRule1">
+                    <match url="(.*)" />
+                    <conditions>
+                        <add input="{HTTP_HOST}" pattern="^bridalnetwork\.co$" negate="true" />
+                    </conditions>
+                    <action type="Redirect" url="http://bridalnetwork.co/{R:1}" />
+                </rule>
+                <rule name="Plesk. SEO-safe redirect for http://www.bridalnetwork.co" enabled="true" patternSyntax="Wildcard" stopProcessing="true">
+                    <match url="*" />
+                    <conditions>
+                        <add input="{HTTPS}" pattern="OFF" />
+                        <add input="{HTTP_HOST}" pattern="www.bridalnetwork.co" />
+                    </conditions>
+                    <serverVariables />
+                    <action type="Redirect" url="http://bridalnetwork.co/{R:1}" />
+                </rule>
+            </rules>
+            <outboundRules>
+                <rule name="ReverseProxyOutboundRule1" preCondition="ResponseIsHtml1" enabled="false">
+                    <match filterByTags="A, Form, Img" pattern="^http(s)?://bridalnetwork.co:5000/(.*)" />
+                    <action type="Rewrite" value="http{R:1}://bridalnetwork.co/{R:2}" />
+                </rule>
+                <preConditions>
+                    <preCondition name="ResponseIsHtml1">
+                        <add input="{RESPONSE_CONTENT_TYPE}" pattern="^text/html" />
+                    </preCondition>
+                </preConditions>
+            </outboundRules>
+        </rewrite>
+    </system.webServer>
+</configuration>

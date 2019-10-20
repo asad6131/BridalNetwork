@@ -1,0 +1,259 @@
+/************* gallery page *****************/
+
+#vendor2.gallery .nav-link {
+        padding: 10px 0px;
+    border-bottom: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 14px;
+}
+#vendor2.gallery .nav-pills .nav-link.active{
+	color: #333;
+	font-weight: bold;
+}
+#vendor2.gallery .right-content{
+    background-color:  #eadecc;
+}
+#vendor2.gallery .inputfile {
+	    display: contents;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+#vendor2.gallery label.file {
+    width: 100%;
+    height: 38px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vendor2.gallery.vendorpanel label.file{
+	justify-content: initial;
+	padding-left: 10px;
+}
+#vendor2.gallery.vendorpanel .contact-white{
+    width: 90%;
+}
+.contact-white1 {
+    margin-top: 0;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 25px 35px;
+    border: 1px solid #707070;
+}
+#vendor2.gallery.vendorpanel .price {
+    margin-top: 40px;
+}
+#vendor2.gallery #contact .mysubmit {
+    background-color: #fff;
+    border-color: #fff;
+    padding: 4px 0;
+    font-size: 18px;
+    width: 100%;
+}
+#vendor2.gallery #contact .tagbtn{
+	border-radius: 0;
+	margin-top: 10px;
+	margin-bottom: 10px;
+        font-size: 14px;
+}
+#vendor2.gallery .right-content{
+        padding: 0 0px;
+}
+#vendor2.gallery #contact .savebtn{
+	width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #FFDBDB;
+}
+#vendor2.gallery #contact select{
+	border: 1px solid #707070;
+}
+#vendor2.gallery.vendorpanel #contact .price .savebtn{
+	text-align: center;
+	width: 100%;
+}
+#vendor2.traffic {
+	text-align: center;
+}
+#vendor2.traffic .stats{
+	background: #BFBFBF;
+    padding-top: 5px;
+    padding-bottom: 10px;
+        min-height: 100%;
+
+}
+#vendor2.traffic .contact-white h3 {
+    padding-bottom: 50px;
+}
+#vendor2.traffic .right-content{
+    padding: 0 0;
+}
+#vendor2.traffic .contact-white {
+    width: 85%;
+    padding: 50px 125px;
+}
+#vendor2.traffic .stats h1 {
+    text-align: center;
+    font-size: 65px;
+    font-weight: bolder;
+    font-family: 'poynter-oldstyle-display', serif !important;
+}
+#vendor2.traffic .stats h6 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'poynter-oldstyle-display', serif !important;
+}
+#vendor2.traffic .left-nav {
+    text-align: left;
+    margin: 45px 0px;
+}
+.adminpanellogin #contact .contact-white{
+	width: 35%;
+}
+.vendorsprofile div#v-pills-tab{
+	    border-bottom: 1px solid;
+}
+#vendor2.vendorsprofile  .nav-link{
+	border-bottom: 0px;
+	    padding-right: 25px;
+}
+.vendorsprofile .galleryitems img{
+	margin-bottom: 15px;
+}
+#vendor2.vendorsprofile  .right-content{
+	background-color: #fff;
+}
+.vendorsprofile .content p{
+	font-size: 12px;
+}
+.mybtn-v .mybtn {
+    background-color: #D8D8D8;
+    border: 0;
+    display: block;
+    width: 50%;
+    border-radius: 0;
+    margin: 10px 5px;
+}
+.vendorsprofile .back{
+	background-color: #F8E6DF;
+    border: 0;
+    display: block;
+    width: 50%;
+    border-radius: 0;
+    margin: 10px 5px;
+}
+#vendor2.gallery.resultpage .right-content #contact {
+    background-color: #F7E3DA;
+} 
+#vendor2.resultpage .img-box {
+    background: #fff;
+    border: 1px solid #bebebe;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    margin-bottom: 15px;
+}
+#vendor2.resultpage .img-box .editor-choice img {
+    width: 120px;
+}
+#vendor2.resultpage .img-box .icon-love {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#vendor2.resultpage .img-box h6 {
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+#vendor2.resultpage .img-box h6, #vendor2.resultpage .img-box p {
+    margin: 0;
+    color: #4c4a47;
+}
+#vendor2.resultpage .img-box p{
+    font-size: 7px;
+}
+#vendor2.resultpage .img-box .editor-choice {
+    position: absolute;
+    top: 2px;
+    left: -15px;
+}
+#vendor2.resultpage .wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+#vendor2.resultpage .caption {
+    text-align: center;
+}
+#vendor2.resultpage .right-content{
+    padding-top: 60px;
+}
+#vendor2.resultpage .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#vendor2.resultpage ol.carousel-indicators {
+    margin: 0;
+}
+#vendor2.resultpage .nav-link {
+    border-bottom: 1px solid;
+}
+@media(max-width: 768px){
+    .col-md-10.right-content {
+        max-width: 100%;
+        flex: auto;
+    }
+    .col-md-2.left-nav {
+        max-width: 100%;
+    }
+}
+@media(max-width: 767px){
+    #vendor2.resultpage .wrapper{
+        width: 50%;
+    }
+    #vendor2.traffic .contact-white {
+        width: 100%;
+        padding: 50px 50px;
+    }
+	#vendor2.gallery .right-content .container{
+		-webkit-column-count: auto;
+    	-moz-column-count: auto;
+    	column-count: auto;
+	}
+	#vendor2.traffic .stats{
+		margin-bottom: 20px;
+		min-height: auto;
+	}
+	#vendor2.traffic .stats h1{
+		    font-size: 65px !important;
+	}
+	.adminpanellogin #contact .contact-white{
+		width: 60%;
+	}
+    #vendor2.gallery.vendorpanel .contact-white{
+        width: 100%;
+    }
+    .contact-white1{
+        width: 100%;
+    }
+}
+@media(max-width: 425px){
+	.adminpanellogin #contact .contact-white{
+		width: 100%;
+            padding: 40px 50px;
+	}
+    #contact .contact-white{
+        padding:0;
+    }
+    #vendor2.resultpage .wrapper {
+        width: 60%;
+    }
+}

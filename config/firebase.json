@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bridal-network-e9867",
+  "private_key_id": "b7dcb005bb1c2300f67ed8f99d85bef79651cadb",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDsZOU2VPYMhb/\nOhzXxchI7SarmJbGFgnyTh6581ez1jqbCBilwDxmXMDSj/9HpVOFO9IZDb3k2x46\n3kqa4zSx47cqJ3aYPYiv3e/pCnThcSeNmaTw4zOlOBM26N3AHP390f79Yzznev9g\n4wK9EzqDps3Ay3BEdW9v825hq0XlIOvVUw7bU37CL2OFAgJCCUGiuLgh2YyMYexb\n1+kD+0adpgazG7KR8l0Zvc3Mhrh26XZdud54XSCDKJCmrfbXfMDWSXPMu1sZ5XS2\nPLi9KbMFIip3QAiOqZV6U3kW17MwdAXcLI/lJGY8YDP+genxJDmpHpcOdkDlU0P/\nBw7umgmRAgMBAAECggEAA/Bve7/maEeVZkIPw67S+dd+6h0iUg6uZwUGcDQGyuxH\nJ7qk/iWZ7his/d5NvDUjMrSbAfZSS+i2lhFxAJHVKLcZTnRBkziB4GzY7j0zT//F\ncX+yX7kxUUfCBQlGTldcZREKFmvlFWblNVigCydpYR/wHegsO5ZTzdJTL7d0x0h9\naokS/FmPQjpdD+nbP9m45igAqWNy/YsrhK1KVSmQ/UfZ4/0VFJ2ZMCXpw8OXa6GJ\nh0m86vZ/qMNkS46uVWqSDFS/JE8OpmYikaAqVkdiJCllDy8jm8pXzLfVNvGVrXA1\nQUzI/TvQ7pD/xKGIlRtJzxwma80uQSuOcWlTMcsAhQKBgQD44H9qodf4utwB/7vc\nKcZ5ohw7KFNee2gqfZR38zXd68YHvU+DUF/RBbMgESU3kc6pgRQPKM7Q2lW+UUyc\nvYElyNOk2spmdNx2YGlvPy2cpb1tyRTMsGJOwskI+i4+Z8pEXAGYiBLG1ngF3EpB\nlizUYznccmq37al1qdGQ+ge4rwKBgQDJS2iuctwWXAywZ1G9JaJvBR17pfOjk/lQ\nZeapGjEJRYmm5A7GVOknoRPb9TRW5J3zGlOe1XVaAFT0pdS6Lq3OzDu3Uw8QQ0CQ\nVOgZ5+f0Ioz4mGV3+VNzqS/6lI+4dgS4AFJeJMm0UyPnyRaVfoDYWxis5+O4uQrM\n1GyB205xvwKBgQCrAV6rfy8tuf9H5FdJrO6yTuBFCa1XI0Zsw8MLNHMT3FhCoyKK\nYOSlc9wjsYQ4DZjJwWZuECUjPpJh5ezVWiTuOHKsOKWQBsYhFJf9l5SYqQ1i7SK8\njonOAmsuHvE9cgV6ORnjm8QDGgR4Smg/bpe5C8ELJxcK8GNa9OeJTTOXAwKBgQCV\nUboChjOa5oeHJ+1reQpofovjWDRGaJMtv5l+YW50qT+2LECFgSE/g25+4QMFXiuI\n1UOodEHMFKjwnj8SKWRHHhtCH3vyHWE8b6+I4A2hfSvDkRDcEXiFOMDdieye8fUI\nJTz0lyeE+5OL8hAtrxyW4eSJBq9XLPTFAuLG5U7ocwKBgDeqCGFoXV5lJTew65Ex\nYQaTgWooZ3t7BX6p4dIaCyzuhAxCJXVcfJqJ5e7oCk6ZIG4Z77a/7WDmvfhgZ1Zs\naf0rv1GG1nu2vjpjAbRFJhpEaWYhu7m3QCWxC5cTsgHSr0Nuita5xgWFBQs967Qg\nl0LJmLh0CD4cqGCmys3KbyBx\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-feiga@bridal-network-e9867.iam.gserviceaccount.com",
+  "client_id": "104935832333899901907",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-feiga%40bridal-network-e9867.iam.gserviceaccount.com"
+}

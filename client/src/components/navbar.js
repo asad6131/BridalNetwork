@@ -19,10 +19,10 @@ class Navbar extends Component {
         <div id="top-menu" className="fixed-top">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-md-12">
+              <div className="col-md-12 col-sm-12 col-xs-12 ">
                 <nav
                   className="navbar navbar-expand-lg navbar-light bg-light"
-                  style={{ height: "50px" }}
+                  style={{ height: "65px", marginLeft: "-4%", marginRight: "-4%" }}
                 >
                   <a
                     className="navbar-brand"

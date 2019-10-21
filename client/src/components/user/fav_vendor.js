@@ -68,7 +68,7 @@ class Fav_Vendor extends Component {
                                   key={index + "_v"}
                                 >
                                   <Link to={"/vendors/profile/" + v.handle}>
-                                    <div class="img-box">
+                                    <div class="img-box slider" >
                                       <div
                                         id={
                                           "carouselExampleIndicators21" +

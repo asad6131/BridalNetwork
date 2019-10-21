@@ -177,7 +177,7 @@ class Login extends Component {
                                     type="submit"
                                     value="Submit"
                                     style={{ fontSize: '12px', textTransform: 'uppercase' }}
-                                    className="btn btn-light w-100 mysubmit savebtn">
+                                    className="button btn btn-light w-100 mysubmit savebtn">
                                     Submit
                                   </MDBBtn>
                                 </div>
@@ -200,9 +200,9 @@ class Login extends Component {
                                 onFailure={responseGoogle} />
                               <br />
                               <br />
-                              <Link className="" style={{ marginBottom: '1rem', marginTop: '1rem', fontSize: "15px" }} to={'/vendor/register'}>Register as new vendor</Link>
+                              <Link className="authTextLg" to={'/vendor/register'}>Register as new vendor</Link>
                               <br />
-                              <Link className="" style={{ marginBottom: '1rem', fontSize: '12px' }} to={'/login'}>Sign in as User</Link>
+                              <Link className="authTextSm" to={'/login'}>Sign in as User</Link>
                               {/* <FacebookLogin
                                 appId={process.env.FACEBOOK_APP_ID || '1354962794657500'}
                                 autoLoad={false}

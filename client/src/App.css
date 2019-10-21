@@ -35,14 +35,15 @@
 .btn-profile-back {
   margin-bottom: 25px;
   /* padding: 5px 30px !important; */
-  background-color: #f3e4dd;
+  background-color: #f1cebe !important;
   border: none !important;
-  color: black;
+  color: black !important;
 }
+
 
 .button{
   padding: 5px 10px;
-  background-color: #f3e4dd;
+  background-color: #ecc0ab  !important;
   border: none !important;
   color: black;
   margin: 0 auto;
@@ -686,13 +687,110 @@ span.circ {
 .googleButton {
   margin: 0 auto;
   text-align: center;
-  color:white;
-  background-color: #DB4C3F;
-  border-color: #fff;
-  border: 1px solid #DB4C3F;
+  color:black !important;
+  background-color: #DB4C3F !important;
+  border-color: #fff !important; 
+  border: 1px solid #DB4C3F !important; 
   padding: 4px 0;
   font-size: 12px;
   width: 100%;
   margin-top:10px;
   text-transform: uppercase
+}
+
+.googleButton:hover {
+  color: white !important;
+}
+
+.profileGallery {
+  display: inline !important;
+  margin-right: 35px; 
+  font-size: 12px;
+  color: black !important;
+  cursor: pointer !important;
+}
+.profileGallery:hover {
+  font-size: 13px !important;
+  margin-left: -2px !important;
+  margin-right: -2px !important;  
+}
+
+.profileInfo {
+  display: inline !important;
+  margin-right: 35px; 
+  font-size: 12px;
+  color: black !important;
+  cursor: pointer !important;
+}
+.profileInfo:hover {
+  font-size: 13px !important;
+  margin-left: -2px !important;  
+}
+
+.profilemsgBtn {
+  margin-top:12.5px !important;
+  margin-left:-1px !important;
+  font-size: 12px !important;
+  height: 30px !important;
+  width: 100px !important;
+  border-radius:8px !important; 
+  background-color: #1F1E1E !important;
+}
+
+.profilemsgBtn:hover {
+  background-color:  #1d1c1ce0 !important;
+}
+
+.navvLink {
+ 
+}
+
+.navvLink:hover {
+  color: rgb(136, 130, 130) !important;
+  padding-left: -3px !important;
+  padding-right: -3px !important;
+  font-size: 16px !important;
+
+}
+
+.authTextLg {
+  margin-bottom: 1rem ;
+  margin-top:1rem; 
+  font-size: 15px;
+}
+.authTextLg:hover {
+  display: inline;
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 16px;
+}
+
+.authTextSm {
+  margin-bottom: 1rem;
+  font-size: 11px;
+}
+.authTextSm:hover {
+  display: inline;
+  margin-left: -4px;
+  margin-right: -4px;
+  font-size: 13px;
+}
+
+
+.authTextReg{
+  margin-top:10px; 
+  font-size: 13px;
+}
+.authTextReg:hover {
+  margin-left: -4px;
+  margin-right: -4px;
+  font-size: 14px;
+}
+
+.slider {
+}
+
+.slider:hover {
+  margin-top: -7px !important;
+  background: rgba(228, 161, 161, 0.692) !important;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
-import { MDBBtn } from "mdbreact";
+import { MDBBtn, MDBView, MDBMask } from "mdbreact";
 import { Link } from 'react-router-dom';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -182,11 +182,12 @@ class Login extends Component {
                                     type="submit"
                                     value="Submit"
                                     style={{ fontSize: '12px', textTransform: 'uppercase' }}
-                                    className="btn btn-light w-100 mysubmit savebtn"
+                                    className="button btn btn-light w-100 mysubmit savebtn"
                                   >
                                     Submit
                                   </MDBBtn >
                                 </div>
+
                               </form>
                               <br />
                               <br />
@@ -223,13 +224,13 @@ class Login extends Component {
                               <br />
                               <br />
                               <Link
-                                className=""
                                 to={'/register'}
-                                style={{ marginBottom: '1rem', marginTop: '1rem', fontSize: '15px' }}>
+                                className="authTextLg">
                                 Register as new user
                               </Link>
+
                               <br />
-                              <Link className="" style={{ marginBottom: '1rem', fontSize: '12px' }} to={'/vendor/login'}>Sign in as Vendor</Link>
+                              <Link className="authTextSm" to={'/vendor/login'}>Sign in as Vendor</Link>
                             </div>
                           </div>
                         </div>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { MDBBtn } from "mdbreact";
+import { MDBBtn, MDBView, MDBMask } from "mdbreact";
 import Cached from "@material-ui/icons/Cached";
 import { connect } from "react-redux";
 import { getCategories } from "../actions/admin/categoryActions";
@@ -157,10 +157,10 @@ class Vendors_new extends Component {
     // console.log(this.state, '///////////////');
     return (
       <div>
-        <section id="vendor2" style={{ marginTop: "50px" }}>
+        <section id="vendor2" style={{ marginTop: "40px" }}>
           <div className="container-fluid">
             <div className="row flex-column-reverse flex-md-row">
-              <div className="col-md-10 right-content" style={{ marginTop: "10px" }}>
+              <div className="col-md-10 right-content" style={{ marginTop: "26px" }}>
                 <div className="tab-content" id="v-pills-tabContent">
                   <div
                     className={"tab-pane fade show active"}
@@ -168,7 +168,7 @@ class Vendors_new extends Component {
                     role="tabpanel"
                     aria-labelledby="pills-home-tab"
                   >
-                    <div className="container">
+                    <div className="container" >
                       <div className="row">
                         {this.state.vendors && this.state.vendors.length > 0 && this.state.vendors.map((v, index) => {
                           // console.log(v.category.name == null ? v.handle : v.category.name, 'aaaaaaaaaaaaa');
@@ -177,12 +177,12 @@ class Vendors_new extends Component {
                             : "url('https://storage.googleapis.com/estatecowork.appspot.com/9b53e81e-496f-11e9-9234-0123456789ab-1552907930767-Bridal%20Logo%202.png')" +
                             " no-repeat center";
                           return (
+
                             <div
-                              className="col-md-4 col-sm-6 col-xs-6"
+                              className="col-md-4 col-sm-6 col-xs-6 "
                               key={index + "_v"}
                             >
-
-                              <div class="img-box">
+                              <div class="img-box slider">
                                 <div
                                   id={
                                     "carouselExampleIndicators2" +
@@ -193,6 +193,7 @@ class Vendors_new extends Component {
                                   data-ride="carousel"
                                 >
                                   <ol class="carousel-indicators">
+
                                     <li
                                       data-target={
                                         "#carouselExampleIndicators2" +
@@ -250,11 +251,11 @@ class Vendors_new extends Component {
                                     })}
                                   </div>
                                 </div>
-                                <div class="icon-love">
+                                <div className="icon-love">
                                   <Link to={"/vendors/profile/" + v.handle}>
-                                    <div class="caption">
+                                    <div className="caption">
                                       <p
-                                        class="text-uppercase pb-2"
+                                        className="text-uppercase pb-2"
                                         style={{
                                           marginBottom: "-7px",
                                           paddingBottom: "0px",
@@ -264,7 +265,7 @@ class Vendors_new extends Component {
                                         <strong>{!isEmpty(v.name) ? v.name : ''}</strong>
                                       </p>
                                       <p
-                                        class="text-uppercase"
+                                        className="text-uppercase"
                                         style={{
                                           marginBottom: "0px",
                                           paddingBottom: "0px",
@@ -292,6 +293,8 @@ class Vendors_new extends Component {
                       </div>
                       <div className="row">
                         <MDBBtn
+                          rounded
+                          style={{ width: "150px" }}
                           className="button"
                           onClick={this.loadMore.bind(this, '')}
                         >
@@ -314,6 +317,7 @@ class Vendors_new extends Component {
                       >
                         <div className="container">
                           <div className="row">
+
                             {this.state.vendors.map((v, index) => {
                               let bgImg = v.avatar
                                 ? "url('" +
@@ -328,7 +332,7 @@ class Vendors_new extends Component {
                                   key={index + "_v"}
                                 >
                                   <Link to={"/vendors/profile/" + v.handle}>
-                                    <div class="img-box">
+                                    <div class=" slider img-box">
                                       <div
                                         id={
                                           "carouselExampleIndicators21" +
@@ -438,13 +442,14 @@ class Vendors_new extends Component {
                             })}
                           </div>
                           <div className="row">
-                            <MDBBtn style={{
-                              padding: '5px 10px', backgroundColor: '#f3e4dd',
-                              border: 'none !important', color: 'black',
-                              margin: '0 auto', marginTop: '35px'
-                            }}
-                              onClick={this.loadMore.bind(this, cat._id)}
-                            >Load More</MDBBtn>
+                            <MDBBtn
+                              rounded
+                              style={{ width: "150px" }}
+                              className="button"
+                              onClick={this.loadMore.bind(this, '')}
+                            >
+                              <Cached style={{ marginRight: "4px", marginBottom: "2px", width: "18px", height: "18px" }} />
+                              Load More</MDBBtn>
                           </div>
                         </div>
                       </div>
@@ -452,7 +457,7 @@ class Vendors_new extends Component {
                   })}
                 </div>
               </div>
-              <div className="col-md-2" style={{ marginBottom: "30px", marginTop: "3.5%" }}>
+              <div className="col-md-2" style={{ marginBottom: "30px", marginTop: "7%" }}>
                 <div
                   className="nav flex-column nav-pills"
                   id="v-pills-tab"
@@ -475,7 +480,7 @@ class Vendors_new extends Component {
                     return (
                       <a
                         style={{ display: (this.state.all_cat || this.state.toggle[index + 1]) ? 'block' : 'none' }}
-                        className={"nav-link text-uppercase "}
+                        className={"nav-link text-uppercase navvLink "}
                         key={index + "_cat_toggle"}
                         data-toggle="tab"
                         href={"#pills_" + cat._id}

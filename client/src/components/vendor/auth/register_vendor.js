@@ -187,13 +187,13 @@ class Register extends Component {
                                     type="submit"
                                     value="Submit"
                                     style={{ textTransform: 'uppercase', fontSize: '12px' }}
-                                    className="btn btn-light w-100 mysubmit savebtn">
+                                    className="button btn btn-light w-100 mysubmit savebtn">
                                     SUBMIT
                                   </MDBBtn >
                                 </div>
                               </form>
                               <br />
-                              <Link className="" style={{ marginBottom: '1rem', marginTop: '10px', fontSize: '11px', textTransform: "uppercase" }} to={'/vendor/login'}>Login as Vendor</Link>
+                              <Link className="authTextReg" to={'/vendor/login'}>Login as Vendor</Link>
                             </div>
                           </div>
                         </div>

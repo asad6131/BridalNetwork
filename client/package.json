@@ -12,7 +12,7 @@
     "install": "^0.13.0",
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",
-    "mdbreact": "^4.21.1",
+    "mdbreact": "git+https://oauth2:iC4y3JayzyosX3ia3vng@git.mdbootstrap.com/mdb/react/re-pro.git",
     "moment": "^2.24.0",
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",

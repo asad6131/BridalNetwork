@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import InnerNav from "./innerNav";
 import { changePassword } from "./../actions/authActions";
-
+import { MDBBtn } from "mdbreact";
 
 class Changepassword extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class Changepassword extends Component {
                     >
                       <div class="container">
                         <div class="row">
-                          <div class="col-md-12" style={{ marginTop: "17%", minWidth: "30%" }}>
+                          <div class="col-md-12" style={{ marginTop: "13%", minWidth: "30%" }}>
                             <div class="contact-white">
                               <h3 class="text-uppercase text-center">
                                 Change Password
@@ -109,11 +109,12 @@ class Changepassword extends Component {
                                     )}
                                   </div>
                                   <div class="form-group text-center">
-                                    <input
+                                    <MDBBtn
                                       type="submit"
                                       value="Submit"
-                                      class="btn btn-light w-100 mysubmit savebtn"
-                                    />
+                                      class="button btn btn-light w-100 mysubmit savebtn">
+                                      Submit
+                                    </MDBBtn >
                                   </div>
                                 </form>
                               </div>

@@ -75,7 +75,7 @@ class Profile extends Component {
                   to={"/vendors"}
 
                   className="btn btn-default btn-sm btn-profile-back"
-                  style={{ fontSize: "14px", height: '30px', width: '107px', padding: '4px', borderRadius: '4px' }}
+                  style={{ fontSize: "14px", marginLeft: "-1px", height: '30px', width: '107px', padding: '4px', borderRadius: '4px' }}
                 >
                   Back
                 </Link>
@@ -89,13 +89,7 @@ class Profile extends Component {
                 </MDBBtn>
                 <br />
                 <h5
-                  style={{
-                    display: "inline",
-                    marginRight: "35px",
-                    fontSize: "12px",
-                    color: "black",
-                    cursor: "pointer"
-                  }}
+                  className="profileInfo"
                   onClick={() => {
                     this.setState({ toggle: true });
                   }}
@@ -103,13 +97,7 @@ class Profile extends Component {
                   INFO
                 </h5>
                 <h5
-                  style={{
-                    display: "inline",
-                    marginRight: "35px",
-                    fontSize: "12px",
-                    color: "black",
-                    cursor: "pointer"
-                  }}
+                  className="profileGallery"
                   onClick={() => {
                     this.setState({ toggle: false });
                   }}
@@ -139,8 +127,7 @@ class Profile extends Component {
                   {this.props.auth.user.id !== vendor._id && vendor.msg && (
                     <Link
                       to={"#"}
-                      style={{ marginTop: "12.5px", marginLeft: "-1px", fontSize: "12px", height: '30px', width: '100px', borderRadius: '8px', backgroundColor: '#1F1E1E' }}
-                      className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn"
+                      className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn profilemsgBtn"
                       onClick={this.checkReceiver.bind(
                         this,
                         vendor.user ? vendor.user._id : ""
@@ -153,16 +140,14 @@ class Profile extends Component {
                   {this.props.auth.user.id !== vendor._id && <br />}
                   <a
                     href={vendor.website ? vendor.website : "#"}
-                    style={{ marginTop: "12.5px", marginLeft: "-1px", fontSize: "12px", height: '30px', width: '100px', borderRadius: '8px', backgroundColor: '#1F1E1E' }}
-                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn"
+                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn profilemsgBtn"
                     target="_blank"
                   >
                     website
                   </a>{" "}
                   <a
                     href={vendor.instagram ? vendor.instagram : "#"}
-                    style={{ marginTop: "12.5px", marginLeft: "-1px", fontSize: "12px", height: '30px', width: '100px', borderRadius: '8px', backgroundColor: '#1F1E1E' }}
-                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn"
+                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn  profilemsgBtn"
                     target="_blank"
                   >
                     Instagram

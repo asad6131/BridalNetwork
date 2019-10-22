@@ -127,7 +127,7 @@ class Profile extends Component {
                   {this.props.auth.user.id !== vendor._id && vendor.msg && (
                     <Link
                       to={"#"}
-                      className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn profilemsgBtn"
+                      className="col-md-4 col-sm-4 col-xs-4 btn btn-primary text-uppercase mybtn profilemsgBtn"
                       onClick={this.checkReceiver.bind(
                         this,
                         vendor.user ? vendor.user._id : ""
@@ -140,14 +140,14 @@ class Profile extends Component {
                   {this.props.auth.user.id !== vendor._id && <br />}
                   <a
                     href={vendor.website ? vendor.website : "#"}
-                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn profilemsgBtn"
+                    className="col-md-4 col-sm-4 col-xs-4 btn btn-primary text-uppercase mybtn profilemsgBtn"
                     target="_blank"
                   >
                     website
                   </a>{" "}
                   <a
                     href={vendor.instagram ? vendor.instagram : "#"}
-                    className="col-md-4 col-sm-12 col-xs-12 btn btn-primary text-uppercase mybtn  profilemsgBtn"
+                    className="col-md-4 col-sm-4 col-xs-4 btn btn-primary text-uppercase mybtn  profilemsgBtn"
                     target="_blank"
                   >
                     Instagram

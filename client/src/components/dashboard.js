@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { surveySubmit } from "../actions/surveyActions";
 import InnerNav from "./innerNav";
+import { MDBSelect, MDBSelectOptions, MDBSelectOption, MDBSelectInput } from "mdbreact";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -340,8 +341,8 @@ class Dashboard extends Component {
       <div>
         <section id="main">
           <div className="container">
-            <div className="white-bg" style={{ padding: "20px", margin: "50px auto 0px" }}>
-              <h3>Plan Your Wedding</h3>
+            <div className="white-bg" style={{ padding: "15px", margin: "50px auto 0px" }}>
+              <h3 style={{ marginBottom: "30px" }}>Plan Your Wedding</h3>
 
               <form onSubmit={this.onSubmit}>
                 <div className="form-row">
@@ -358,531 +359,616 @@ class Dashboard extends Component {
                     />
                   </div>
                 </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="phone"
-                    name="phone"
-                    value={this.state.phone}
-                    placeholder="Contact No. or Email Address"
-                    required
-                    onChange={this.onChange}
-                  />
+
+                <div className="form-row" >
+                  <div className="form-group col-md-12">
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="phone"
+                      name="phone"
+                      value={this.state.phone}
+                      placeholder="Contact No. or Email Address"
+                      required
+                      onChange={this.onChange}
+                    />
+                  </div>
                 </div>
-                <div className="form-row">
+
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Select Venue"
                       name="venue"
                       id="venue"
-                      className="form-control"
+                      // className="form-control"
                       value={this.state.venue}
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Select Venue</option>
-                      <option value="Multi Purpose Hall (HDB)">
-                        Multi Purpose Hall (HDB)
-                          </option>
-                      <option value="Multi Purpose Hall (CC)">
-                        Multi Purpose Hall (CC)
-                          </option>
-                      <option value="Ballroom">Ballroom</option>
-                      <option value="HDB">HDB</option>
-                    </select>
+
+                      <MDBSelectInput selected="Select Venue" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Select Venue</MDBSelectOption>
+                        <MDBSelectOption value="Multi Purpose Hall (HDB)">
+                          Multi Purpose Hall (HDB)
+                        </MDBSelectOption>
+                        <MDBSelectOption value="Multi Purpose Hall (CC)">
+                          Multi Purpose Hall (CC)
+                        </MDBSelectOption>
+                        <MDBSelectOption value="Ballroom">Ballroom</MDBSelectOption>
+                        <MDBSelectOption value="HDB">HDB</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
-                  <div className="form-group col-md-6" style={{ display: 'none' }}>
-                    <select
-                      name="duration"
-                      id="duration"
-                      className="form-control"
-                      value={this.state.duration}
-                      onChange={this.onChange}
-                    >
-                      <option value="">Duration of Weeding</option>
-                      <option value="1 Day Event">1 Day Event</option>
-                      <option value="2 Day Event">2 Day Event</option>
-                    </select>
-                  </div>
+                  {/* </div> */}
+                  {/* <div className="form-row" >
+                    <div className="form-group col-md-6" style={{ display: 'none' }}>
+                      <MDBSelect
+                        name="duration"
+                        id="duration"
+                        value={this.state.duration}
+                        onChange={this.onChange}
+                        color="dark"
+                      >
+                        <MDBSelectInput selected="Duration of Wedding" />
+                        <MDBSelectOptions>
+                          <MDBSelectOption disabled>Duration of Wedding</MDBSelectOption>
+                          <MDBSelectOption value="1 Day Event">1 Day Event</MDBSelectOption>
+                          <MDBSelectOption value="2 Day Event">2 Day Event</MDBSelectOption>
+                        </MDBSelectOptions>
+                      </MDBSelect>
+                    </div>
+                  </div> */}
+                  {/* <div className="form-row" style={{ marginTop: "-20px" }}> */}
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="No. of Pax"
                       name="pax"
                       id="pax"
-                      className="form-control"
                       value={this.state.pax}
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">No. of Pax</option>
-                      <option value="300 Pax">300 Pax</option>
-                      <option value="500 Pax">500 Pax</option>
-                      <option value="800 Pax">800 Pax</option>
-                      <option value="1000 Pax">1000 Pax</option>
-                    </select>
+                      <MDBSelectInput selected="No. of Pax" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>No. of Pax</MDBSelectOption>
+                        <MDBSelectOption value="300 Pax">300 Pax</MDBSelectOption>
+                        <MDBSelectOption value="500 Pax">500 Pax</MDBSelectOption>
+                        <MDBSelectOption value="800 Pax">800 Pax</MDBSelectOption>
+                        <MDBSelectOption value="1000 Pax">1000 Pax</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
                 <div className="form-row" style={{ display: 'none' }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="No.of Hours"
                       name="hours"
                       id="hours"
-                      className="form-control"
                       value={this.state.hours}
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">No. of Hours</option>
-                      <option value="5 Hours">5 Hours</option>
-                      <option value="8 hours">8 hours</option>
-                      <option value="10 hours">10 hours</option>
-                      <option value="12 Hours">12 Hours</option>
-                    </select>
+                      <MDBSelectInput selected="No. of Hours" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>No. of Hours</MDBSelectOption>
+                        <MDBSelectOption value="5 Hours">5 Hours</MDBSelectOption>
+                        <MDBSelectOption value="8 hours">8 hours</MDBSelectOption>
+                        <MDBSelectOption value="10 hours">10 hours</MDBSelectOption>
+                        <MDBSelectOption value="12 Hours">12 Hours</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
-                <div className="form-row" style={{ display: 'none' }}>
+                <div className="form-row" style={{ display: 'none', marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Overall Budget"
                       name="budget"
                       id="budget"
-                      className="form-control"
                       value={this.state.budget}
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Overall Budget</option>
-                      <option value="1000">$1000</option>
-                      <option value="3000">$3000</option>
-                      <option value="5000">$5000</option>
-                      <option value="12000">$12000</option>
-                    </select>
+                      <MDBSelectInput selected="Overall Budget" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Overall Budget</MDBSelectOption>
+                        <MDBSelectOption value="1000">$1000</MDBSelectOption>
+                        <MDBSelectOption value="3000">$3000</MDBSelectOption>
+                        <MDBSelectOption value="5000">$5000</MDBSelectOption>
+                        <MDBSelectOption value="12000">$12000</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Spare Makeup Artist"
                       name="artist"
                       id="artist"
-                      className="form-control"
                       value={this.state.artist}
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Spare Makeup Artist</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Spare Makeup Artist" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Spare Makeup Artist</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
 
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="No. of Outfits"
                       name="outfits"
                       id="outfits"
-                      className="form-control"
                       required
                       onChange={this.filterOutfits.bind(this)}
+                      color="dark"
                     >
-                      <option value="">No. of Outfits</option>
-                      <option value="1 OUTFIT 4HRS">
-                        1 OUTFIT 4HRS
-                          </option>
-                      <option value="1 OUTFIT 7HRS">
-                        1 OUTFIT 7HRS
-                          </option>
-                      <option value="2 OUTFIT">2 OUTFIT</option>
-                      <option value="3 OUTFIT">3 OUTFIT</option>
-                      <option value="4 OUTFIT">
-                        4 OUTFIT
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="No. of Outfits" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>No. of Outfits</MDBSelectOption>
+                        <MDBSelectOption value="1 OUTFIT 4HRS">
+                          1 OUTFIT 4HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="1 OUTFIT 7HRS">
+                          1 OUTFIT 7HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="2 OUTFIT">2 OUTFIT</MDBSelectOption>
+                        <MDBSelectOption value="3 OUTFIT">3 OUTFIT</MDBSelectOption>
+                        <MDBSelectOption value="4 OUTFIT">
+                          4 OUTFIT
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Outfits Budget"
                       name="outfits_budget"
                       id="outfits_budget"
-                      className="form-control"
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Outfits Budget</option>
-                      <option
-                        value="600 - 990"
-                        style={{ display: this.state.outfits14 }}
-                      >
-                        $600 - $990
-                          </option>
-                      <option
-                        value="990 - 1200"
-                        style={{ display: this.state.outfits14 }}
-                      >
-                        $990 - $1200
-                          </option>
-                      <option
-                        value="1600 - 1900"
-                        style={{ display: this.state.outfits17 }}
-                      >
-                        $1600 - $1900
-                          </option>
-                      <option
-                        value="2100 - 2600"
-                        style={{ display: this.state.outfits17 }}
-                      >
-                        $2100 - $2600
-                          </option>
-                      <option
-                        value="2300 - 2600"
-                        style={{ display: this.state.outfits2 }}
-                      >
-                        $2300 - $2600
-                          </option>
-                      <option
-                        value="2500 - 2900"
-                        style={{ display: this.state.outfits2 }}
-                      >
-                        $2500 - $2900
-                          </option>
-                      <option
-                        value="2500 - 2900"
-                        style={{ display: this.state.outfits3 }}
-                      >
-                        $2500 - $2900
-                          </option>
-                      <option
-                        value="2900 - 3500"
-                        style={{ display: this.state.outfits3 }}
-                      >
-                        $2900 - $3500
-                          </option>
-                      <option
-                        value="3300 - 3500"
-                        style={{ display: this.state.outfits4 }}
-                      >
-                        $3300 - $3500
-                          </option>
-                      <option
-                        value="3500 - ABOVE"
-                        style={{ display: this.state.outfits4 }}
-                      >
-                        $3500 - ABOVE
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Outfits Budget" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Outfits Budget</MDBSelectOption>
+                        <MDBSelectOption
+                          value="600 - 990"
+                          style={{ display: this.state.outfits14 }}
+                        >
+                          $600 - $990
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="990 - 1200"
+                          style={{ display: this.state.outfits14 }}
+                        >
+                          $990 - $1200
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="1600 - 1900"
+                          style={{ display: this.state.outfits17 }}
+                        >
+                          $1600 - $1900
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2100 - 2600"
+                          style={{ display: this.state.outfits17 }}
+                        >
+                          $2100 - $2600
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2300 - 2600"
+                          style={{ display: this.state.outfits2 }}
+                        >
+                          $2300 - $2600
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2500 - 2900"
+                          style={{ display: this.state.outfits2 }}
+                        >
+                          $2500 - $2900
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2500 - 2900"
+                          style={{ display: this.state.outfits3 }}
+                        >
+                          $2500 - $2900
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2900 - 3500"
+                          style={{ display: this.state.outfits3 }}
+                        >
+                          $2900 - $3500
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="3300 - 3500"
+                          style={{ display: this.state.outfits4 }}
+                        >
+                          $3300 - $3500
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="3500 - ABOVE"
+                          style={{ display: this.state.outfits4 }}
+                        >
+                          $3500 - ABOVE
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
 
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Deco & Catering"
                       name="deco"
                       id="deco"
-                      className="form-control"
                       required
                       onChange={this.filterDeco.bind(this)}
+                      color="dark"
                     >
-                      <option value="">Deco & Catering</option>
-                      <option value="Full Deco + Catering">
-                        Full Deco + Catering
-                          </option>
-                      <option value="Full Deco w/o Catering">
-                        Full Deco w/o Catering
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Deco & Catering" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Deco & Catering</MDBSelectOption>
+                        <MDBSelectOption value="Full Deco + Catering">
+                          Full Deco + Catering
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Full Deco w/o Catering">
+                          Full Deco w/o Catering
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Deco Budget"
                       name="deco_budget"
                       id="deco_budget"
-                      className="form-control"
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Deco Budget</option>
-                      <option
-                        value="11000 - 15000"
-                        style={{ display: this.state.Deco_11000_15000 }}
-                      >
-                        $11000 - $15000
-                          </option>
-                      <option
-                        value="15000 - 20000"
-                        style={{ display: this.state.Deco_16000_20000 }}
-                      >
-                        $15000 - $20000
-                          </option>
-                      <option
-                        value="20000 - ABOVE"
-                        style={{ display: this.state.Deco_21000_above }}
-                      >
-                        $20000 - ABOVE
-                          </option>
-                      <option
-                        value="4500 - 9000"
-                        style={{ display: this.state.Deco_4500_9000 }}
-                      >
-                        $4500 - $9000
-                          </option>
-                      <option
-                        value="10000 - 14000"
-                        style={{ display: this.state.Deco_10000_14000 }}
-                      >
-                        $10000 - $14000
-                          </option>
-                      <option
-                        value="15000 - ABOVE"
-                        style={{ display: this.state.Deco_15000_above }}
-                      >
-                        $15000 - ABOVE
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Deco Budget" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Deco Budget</MDBSelectOption>
+                        <MDBSelectOption
+                          value="11000 - 15000"
+                          style={{ display: this.state.Deco_11000_15000 }}
+                        >
+                          $11000 - $15000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="15000 - 20000"
+                          style={{ display: this.state.Deco_16000_20000 }}
+                        >
+                          $15000 - $20000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="20000 - ABOVE"
+                          style={{ display: this.state.Deco_21000_above }}
+                        >
+                          $20000 - ABOVE
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="4500 - 9000"
+                          style={{ display: this.state.Deco_4500_9000 }}
+                        >
+                          $4500 - $9000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="10000 - 14000"
+                          style={{ display: this.state.Deco_10000_14000 }}
+                        >
+                          $10000 - $14000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="15000 - ABOVE"
+                          style={{ display: this.state.Deco_15000_above }}
+                        >
+                          $15000 - ABOVE
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Photography"
                       name="photography"
                       id="photography"
-                      className="form-control"
                       required
                       onChange={this.filterPhotoGraphy.bind(this)}
+                      color="dark"
                     >
-                      <option value="">Photography</option>
-                      <option value="Event 4HRS">
-                        Event 4HRS
-                          </option>
-                      <option value="Event 8HRS">
-                        Event 8HRS
-                          </option>
-                      <option value="Event only + outdoor 10hrs">
-                        Event only + outdoor 10hrs
-                          </option>
-                      <option value="Pre wed + Event + Outdoor">
-                        Pre wed + Event + Outdoor
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Photography" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Photography</MDBSelectOption>
+                        <MDBSelectOption value="Event 4HRS">
+                          Event 4HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Event 8HRS">
+                          Event 8HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Event only + outdoor 10hrs">
+                          Event only + outdoor 10hrs
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Pre wed + Event + Outdoor">
+                          Pre wed + Event + Outdoor
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Photography Budget"
                       name="photography_budget"
                       id="photography_budget"
-                      className="form-control"
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Photography Budget</option>
-                      <option value="400 - 700"
-                        style={{ display: this.state.Photo_400_700 }}
-                      >$400 - $700</option>
-                      <option value="700 - 1000"
-                        style={{ display: this.state.Photo_700_1000 }}
-                      >$700 - $1000</option>
-                      <option value="1000 - 1200"
-                        style={{ display: this.state.Photo_1000_1200 }}
-                      >$1000 - $1200</option>
-                      <option
-                        value="1300 - 1600"
-                        style={{ display: this.state.Photo_1300_1600 }}
-                      >
-                        $1300 - $1600
-                          </option>
-                      <option
-                        value="1600 - 2000"
-                        style={{ display: this.state.Photo_1600_2000 }}
-                      >
-                        $1600 - $2000
-                          </option>
+                      <MDBSelectInput selected="Photography Budget" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Photography Budget</MDBSelectOption>
+                        <MDBSelectOption value="400 - 700"
+                          style={{ display: this.state.Photo_400_700 }}
+                        >$400 - $700</MDBSelectOption>
+                        <MDBSelectOption value="700 - 1000"
+                          style={{ display: this.state.Photo_700_1000 }}
+                        >$700 - $1000</MDBSelectOption>
+                        <MDBSelectOption value="1000 - 1200"
+                          style={{ display: this.state.Photo_1000_1200 }}
+                        >$1000 - $1200</MDBSelectOption>
+                        <MDBSelectOption
+                          value="1300 - 1600"
+                          style={{ display: this.state.Photo_1300_1600 }}
+                        >
+                          $1300 - $1600
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="1600 - 2000"
+                          style={{ display: this.state.Photo_1600_2000 }}
+                        >
+                          $1600 - $2000
+                          </MDBSelectOption>
 
-                      <option
-                        value="1600 - 1800"
-                        style={{ display: this.state.Photo_1600_1800 }}
-                      >
-                        $1600 - $1800
-                          </option>
-                      <option
-                        value="1800 - 2000"
-                        style={{ display: this.state.Photo_1800_2000 }}
-                      >
-                        $1800 - $2000
-                          </option>
-                      <option
-                        value="2000 - 2400"
-                        style={{ display: this.state.Photo_2000_2400 }}
-                      >
-                        $2000 - $2400
-                          </option>
-                      <option
-                        value="2400 - 2600"
-                        style={{ display: this.state.Photo_2400_2600 }}
-                      >
-                        $2400 - $2600
-                          </option>
-                      <option
-                        value="2000 - ABOVE"
-                        style={{ display: this.state.Photo_2000_above }}
-                      >
-                        $2000 - ABOVE
-                          </option>
-                      <option
-                        value="2600 - ABOVE"
-                        style={{ display: this.state.Photo_2600_above }}
-                      >
-                        $2600 - ABOVE
-                          </option>
-                    </select>
+                        <MDBSelectOption
+                          value="1600 - 1800"
+                          style={{ display: this.state.Photo_1600_1800 }}
+                        >
+                          $1600 - $1800
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="1800 - 2000"
+                          style={{ display: this.state.Photo_1800_2000 }}
+                        >
+                          $1800 - $2000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2000 - 2400"
+                          style={{ display: this.state.Photo_2000_2400 }}
+                        >
+                          $2000 - $2400
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2400 - 2600"
+                          style={{ display: this.state.Photo_2400_2600 }}
+                        >
+                          $2400 - $2600
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2000 - ABOVE"
+                          style={{ display: this.state.Photo_2000_above }}
+                        >
+                          $2000 - ABOVE
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2600 - ABOVE"
+                          style={{ display: this.state.Photo_2600_above }}
+                        >
+                          $2600 - ABOVE
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Videography"
                       name="videography"
                       id="videography"
-                      className="form-control"
                       required
                       onChange={this.filterVideoGraphy.bind(this)}
                       value={this.state.videography}
+                      color="dark"
                     >
-                      <option value="">Videography</option>
-                      <option value="Event 4HRS">
-                        Event 4HRS
-                          </option>
-                      <option value="Event 8HRS">
-                        Event 8HRS
-                          </option>
-                      <option value="Event only + outdoor 10hrs">
-                        Event only + outdoor 10hrs
-                          </option>
-                      <option value="Pre wed + Event + Outdoor">
-                        Pre wed + Event + Outdoor
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Videography" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Videography</MDBSelectOption>
+                        <MDBSelectOption value="Event 4HRS">
+                          Event 4HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Event 8HRS">
+                          Event 8HRS
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Event only + outdoor 10hrs">
+                          Event only + outdoor 10hrs
+                          </MDBSelectOption>
+                        <MDBSelectOption value="Pre wed + Event + Outdoor">
+                          Pre wed + Event + Outdoor
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Videography Budget"
                       name="videography_budget"
                       id="videography_budget"
-                      className="form-control"
                       value={this.state.videography_budget}
                       required
                       onChange={this.onChange}
+                      color="dark"
                     >
-                      <option value="">Videography Budget</option>
-                      <option
-                        value="700 - 1200"
-                        style={{ display: this.state.Video4 }}
-                      >
-                        $700 - $1200
-                          </option>
-                      <option
-                        value="1200 - 1600"
-                        style={{ display: this.state.Video4 }}
-                      >
-                        $1200 - $1600
-                          </option>
-                      <option
-                        value="1600 - 2000"
-                        style={{ display: this.state.Video8 }}
-                      >
-                        $1600 - $2000
-                          </option>
-                      <option
-                        value="2000 - ABOVE"
-                        style={{ display: this.state.Video8 }}
-                      >
-                        $2000 - ABOVE
-                          </option>
-                      <option
-                        value="16000 - 1800"
-                        style={{ display: this.state.Video10 }}
-                      >
-                        $1600 - $1800
-                          </option>
-                      <option
-                        value="2500 - ABOVE"
-                        style={{ display: this.state.Video10 }}
-                      >
-                        $2500 - ABOVE
-                          </option>
-                      <option
-                        value="2500 - 3000"
-                        style={{ display: this.state.Videopw }}
-                      >
-                        $2500 - $3000
-                          </option>
-                      <option
-                        value="3000 - ABOVE"
-                        style={{ display: this.state.Videopw }}
-                      >
-                        $3000 - ABOVE
-                          </option>
-                    </select>
+                      <MDBSelectInput selected="Videography Budget" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Videography Budget</MDBSelectOption>
+                        <MDBSelectOption
+                          value="700 - 1200"
+                          style={{ display: this.state.Video4 }}
+                        >
+                          $700 - $1200
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="1200 - 1600"
+                          style={{ display: this.state.Video4 }}
+                        >
+                          $1200 - $1600
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="1600 - 2000"
+                          style={{ display: this.state.Video8 }}
+                        >
+                          $1600 - $2000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2000 - ABOVE"
+                          style={{ display: this.state.Video8 }}
+                        >
+                          $2000 - ABOVE
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="16000 - 1800"
+                          style={{ display: this.state.Video10 }}
+                        >
+                          $1600 - $1800
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2500 - ABOVE"
+                          style={{ display: this.state.Video10 }}
+                        >
+                          $2500 - ABOVE
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="2500 - 3000"
+                          style={{ display: this.state.Videopw }}
+                        >
+                          $2500 - $3000
+                          </MDBSelectOption>
+                        <MDBSelectOption
+                          value="3000 - ABOVE"
+                          style={{ display: this.state.Videopw }}
+                        >
+                          $3000 - ABOVE
+                          </MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Berkat / Door Gifts"
                       name="berkat"
                       id="berkat"
-                      className="form-control"
                       required
                       onChange={this.onChange}
                       value={this.state.berkat}
+                      color="dark"
                     >
-                      <option value="">Berkat / Door Gifts</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Berkat / Door Gifts" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Berkat / Door Gifts</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Heena"
                       name="heena"
                       id="heena"
-                      className="form-control"
                       required
                       onChange={this.onChange}
                       value={this.state.heena}
+                      color="dark"
                     >
-                      <option value="">Heena</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Heena" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Heena</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
-                <div className="form-row">
+                <div className="form-row" style={{ marginTop: "-20px" }}>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Wedding Cakes"
                       name="cakes"
                       id="cakes"
-                      className="form-control"
                       required
                       onChange={this.onChange}
                       value={this.state.cakes}
+                      color="dark"
                     >
-                      <option value="">Weeding Cakes</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Wedding Cakes" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Wedding Cakes</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                   <div className="form-group col-md-6">
-                    <select
+                    <MDBSelect
+                      label="Groom Stylist"
                       name="stylist"
                       id="stylist"
-                      className="form-control"
                       required
                       onChange={this.onChange}
                       value={this.state.stylist}
+                      color="dark"
                     >
-                      <option value="">Groom Stylist</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Groom Stylist" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Groom Stylist</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
-                  <div className="form-group col-md-6">
-                    <select
+                  <div className="form-group col-md-6" style={{ marginTop: "-20px" }}>
+                    <MDBSelect
+                      label="Makeup"
                       name="artist"
                       id="artist"
-                      className="form-control"
                       required
                       onChange={this.onChange}
                       value={this.state.artist}
+                      color="dark"
                     >
-                      <option value="">Makeup</option>
-                      <option value="0">No</option>
-                      <option value="1">Yes</option>
-                    </select>
+                      <MDBSelectInput selected="Makeup" />
+                      <MDBSelectOptions>
+                        <MDBSelectOption disabled>Makeup</MDBSelectOption>
+                        <MDBSelectOption value="0">No</MDBSelectOption>
+                        <MDBSelectOption value="1">Yes</MDBSelectOption>
+                      </MDBSelectOptions>
+                    </MDBSelect>
                   </div>
                 </div>
                 <div className="form-group">

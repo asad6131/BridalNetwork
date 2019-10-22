@@ -41,8 +41,8 @@ import Dashboard from "./components/dashboard";
 import Vendors2 from "./components/vendors_new";
 import Vendors_Profile from "./components/vendors/profile";
 import Vendors_Category from "./components/vendors";
-
-import Inbox from "./components/inbox";
+// import Inbox from "./components/inbox";
+import Inbox from "./components/chat/chat";
 import Fav_Vendor from "./components/user/fav_vendor.js";
 import Edit_User from "./components/user/edit.js";
 import Chat from "./components/inbox/chat";
@@ -164,12 +164,14 @@ class App extends Component {
             <Route path="/vendors" component={Vendors2} />
             {/* <Route path="/vendors2" component={Vendors2} /> */}
             <Route path="/home" component={Home} />
-            <PrivateRoute path="/inbox/:id" component={Chat} />
-            <PrivateRoute path="/inbox" component={Inbox} />
+            {/* <PrivateRoute path="/inbox/:id" component={Chat} /> */}
+            {/* <PrivateRoute path="/inbox" component={Inbox} /> */}
             <PrivateRoute path="/fav-vendor" component={Fav_Vendor} />
             <PrivateRoute path="/plan" component={Dashboard} />
             <Route path="/change-password" component={ChangePassword} />
             <Route path="/dashboard" component={Inbox} />
+            {/* //mdb chat */}
+            <PrivateRoute path="/inbox" component={Inbox} />
             <Route path="/" component={Vendors2} />
           </Switch>
           {/*<Route exact path="/not-found" component={NotFound} />*/}

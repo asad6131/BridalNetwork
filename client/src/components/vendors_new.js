@@ -159,11 +159,47 @@ class Vendors_new extends Component {
       <div>
         <section id="vendor2" style={{ marginTop: "40px" }}>
           <div className="container-fluid">
-            <div className="row flex-column-reverse flex-md-row">
-              <div className="col-md-10 right-content" style={{ marginTop: "26px" }}>
+            <div className="row">
+              <div className="col-md-2 left-nav stuck" style={{ marginBottom: "30px", marginTop: "4%" }}>
+                <div
+                  className="nav  flex-column nav-pills"
+                  id="v-pills-tab"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  <a
+                    onClick={this.changeCat}
+                    className={"nav-link text-uppercase active"}
+                    data-toggle="tab"
+                    href={"#pills_1A"}
+                    role="tab"
+                    onClick={() => {
+                      this.setState({ all_cat: !this.state.all_cat });
+                    }}
+                  >
+                    All Categories
+                  </a>
+                  {this.state.categories.map((cat, index) => {
+                    return (
+                      <a
+                        style={{ display: (this.state.all_cat || this.state.toggle[index + 1]) ? 'block' : 'none' }}
+                        className={"nav-link text-uppercase  navvLink "}
+                        key={index + "_cat_toggle"}
+                        data-toggle="tab"
+                        href={"#pills_" + cat._id}
+                        role="tab"
+                        onClick={this.handleCategoryToggle.bind(this, index + 1, cat._id)}
+                      >
+                        {cat.name}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="col-md-10 right-content not-stuck" style={{ marginTop: "20px" }}>
                 <div className="tab-content" id="v-pills-tabContent">
                   <div
-                    className={"tab-pane fade show active"}
+                    className={"tab-pane fade show active "}
                     id={"pills_1A"}
                     role="tabpanel"
                     aria-labelledby="pills-home-tab"
@@ -453,42 +489,6 @@ class Vendors_new extends Component {
                           </div>
                         </div>
                       </div>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="col-md-2" style={{ marginBottom: "30px", marginTop: "7%" }}>
-                <div
-                  className="nav flex-column nav-pills"
-                  id="v-pills-tab"
-                  role="tablist"
-                  aria-orientation="vertical"
-                >
-                  <a
-                    onClick={this.changeCat}
-                    className={"nav-link text-uppercase active"}
-                    data-toggle="tab"
-                    href={"#pills_1A"}
-                    role="tab"
-                    onClick={() => {
-                      this.setState({ all_cat: !this.state.all_cat });
-                    }}
-                  >
-                    All Categories
-                  </a>
-                  {this.state.categories.map((cat, index) => {
-                    return (
-                      <a
-                        style={{ display: (this.state.all_cat || this.state.toggle[index + 1]) ? 'block' : 'none' }}
-                        className={"nav-link text-uppercase navvLink "}
-                        key={index + "_cat_toggle"}
-                        data-toggle="tab"
-                        href={"#pills_" + cat._id}
-                        role="tab"
-                        onClick={this.handleCategoryToggle.bind(this, index + 1, cat._id)}
-                      >
-                        {cat.name}
-                      </a>
                     );
                   })}
                 </div>

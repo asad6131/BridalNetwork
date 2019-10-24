@@ -183,6 +183,7 @@ select {
   .stuck {
     position: fixed;
     z-index: 10;
+    
   }
 
   .stuck p {
@@ -190,7 +191,7 @@ select {
   }
 
   .not-stuck {
-    margin-left: 252px;
+    margin-left: 224px;
   }
 
   #vendor2 .right-content {

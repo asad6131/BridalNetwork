@@ -131,7 +131,7 @@ class ChatPage extends Component {
 
   render() {
     return (
-      <MDBCard className="grey lighten-3 chat-room mt-5">
+      <MDBCard className="grey lighten-3 chat-room mt-5" style={{ border: "2px black solid", borderRadius: "3px" }}>
         <MDBCardBody>
           <MDBRow className="px-lg-2 px-2">
             <MDBCol md="6" xl="4" className="px-0 mb-4 mb-md-0 scrollable-friends-list">
@@ -146,7 +146,7 @@ class ChatPage extends Component {
                 </div>
               </MDBScrollbar>
             </MDBCol>
-            <MDBCol md="6" xl="8" className="pl-md-3 mt-4 mt-md-0 px-lg-auto">
+            <MDBCol md="6" xl="8" className="pl-md-3 mt-4 mt-md-0 px-lg-auto" >
               <div className="scrollable-chat">
                 <MDBScrollbar>
                   <MDBListGroup className="list-unstyled pl-3 pr-3">

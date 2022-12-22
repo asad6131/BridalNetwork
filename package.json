@@ -23,7 +23,7 @@
     "fs": "0.0.1-security",
     "gravatar": "^1.8.0",
     "http-proxy": "^1.18.0",
-    "jsonwebtoken": "^8.2.0",
+    "jsonwebtoken": "^9.0.0",
     "mdbreact": "^4.21.1",
     "mongoose": "^5.4.19",
     "morgan": "~1.9.0",
